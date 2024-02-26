@@ -1,39 +1,189 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Cache Bank Landing Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/css/leaflet.css">
-    <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css">
-    <link rel="stylesheet" href="./assets/css/theme.css">
-    <link rel="stylesheet" href="./assets/css/loopple/loopple.css">
+	<meta charset="utf-8" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no"
+	/>
+	<title>Cache Bank Landing Page</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+		rel="stylesheet"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+		integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+		crossorigin=""
+	/>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/css/leaflet.css"
+	/>
+	<link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css" />
+	<link rel="stylesheet" href="./assets/css/theme.css" />
+	<link rel="stylesheet" href="./assets/css/loopple/loopple.css" />
 </head>
 
-<body class="null">
-    <div class="container flex flex-col mx-auto">
-        <!-- Main container with navigation and header content -->
-    </div>
-    <div class="w-full">
-        <!-- Wide full-width container for additional content -->
-    </div>
-    <div class="container mx-auto">
-        <!-- Centered container for more content -->
-    </div>
-    <div class="w-full">
-        <!-- Wide full-width container for additional content -->
-    </div>
-    <div class="w-full">
-        <!-- Wide full-width container for additional content -->
-    </div>
-    <div class="w-full bg-green-500">
-        <!-- Full-width footer container with green background -->
-    </div>
-    <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/maps.js"></script>
-    <script src="./assets/js/loopple/loopple.js"></script>
+<body class="bg-gray-100">
+	<div class="mx-auto bg-white pt-7">
+		<!-- COMPONENT 1: RESPONSIVE NAVIGATION -->
+		<header
+			class="container sticky top-0 w-full bg-white flex flex-wrap justify-between items-center shrink-0"
+		>
+			<!------------------------------ Company logo ------------------------------>
+			<div class="px-4">
+				<img
+					class="h-8"
+					src="assets/component-1/navigation/cache-bank-logo.png"
+				/>
+			</div>
+			<!------------------------- Mobile navigation menu ------------------------->
+			<!-- Navigation menu button -->
+			<button
+				id="mobile-menu-toggle"
+				class="md:hidden p-4"
+				aria-label="toggle navigation"
+			>
+				<svg
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					class="h-6 w-6"
+					fill="none"
+				>
+					<g clip-path="url(#clip0_429_11066)">
+						<path
+							d="M3 6.00092H21M3 12.0009H21M3 18.0009H21"
+							stroke="#292929"
+							stroke-width="2.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</g>
+					<defs>
+						<clipPath id="clip0_429_11066">
+							<rect
+								width="24"
+								height="24"
+								fill="white"
+								transform="translate(0 0.000915527)"
+							/>
+						</clipPath>
+					</defs>
+				</svg>
+			</button>
+
+			<!-- Collapsed/ Expanded navigation menu -->
+			<nav
+				id="mobile-menu"
+				class="hidden absolute w-full overflow-hidden bg-white shadow-main max-h-screen top-full px-4 py-4 md:hidden"
+			>
+				<!-- Navigation links-->
+				<ul>
+					<li class="mb-3">
+						<a
+							href="#product"
+							class="nav_link text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
+							>Product</a
+						>
+					</li>
+					<li class="mb-3">
+						<a
+							href="#features"
+							class="nav_link text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
+							>Features</a
+						>
+					</li>
+					<li class="mb-3">
+						<a
+							href="#get_started"
+							class="nav_link text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
+							>Get Started</a
+						>
+					</li>
+					<li class="mb-3">
+						<a
+							href="#contact"
+							class="nav_link text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
+							>Contact</a
+						>
+					</li>
+				</ul>
+
+				<!-- Log In and Sign up Buttons-->
+				<div class="flex flex-col justify-start items-start gap-3">
+					<button
+						class="flex items-center px-4 py-2 text-sm font-normal text-black"
+					>
+						Log In
+					</button>
+					<button
+						class="flex items-center px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500"
+					>
+						Sign Up
+					</button>
+				</div>
+			</nav>
+
+			<!------------------------- Desktop navigation bar ------------------------->
+			<!-- Navigation links-->
+			<nav
+				class="hidden md:flex items-center justify-between gap-12 text-black"
+			>
+				<a
+					href="#product"
+					class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
+					>Product</a
+				>
+				<a
+					href="#features"
+					class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
+					>Features</a
+				>
+				<a
+					href="#get_started"
+					class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
+					>Get Started</a
+				>
+				<a
+					href="#contact"
+					class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900"
+					>Contact</a
+				>
+			</nav>
+			<!--Buttons for desktop view-->
+			<div class="hidden md:flex items-center gap-8 p-4">
+				<button
+					class="text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900"
+				>
+					Log In
+				</button>
+				<button
+					class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500"
+				>
+					Sign Up
+				</button>
+			</div>
+		</header>
+	</div>
+
+	<!-- Footer -->
+	<div class="w-full bg-green-500">
+		<!-- Full-width footer container with green background -->
+	</div>
+
+	<script>
+		document
+			.getElementById("mobile-menu-toggle")
+			.addEventListener("click", function () {
+				document.getElementById("mobile-menu").classList.toggle("hidden");
+			});
+	</script>
+	<script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/leaflet.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/maps.js"></script>
+	<script src="./assets/js/loopple/loopple.js"></script>
 </body>
