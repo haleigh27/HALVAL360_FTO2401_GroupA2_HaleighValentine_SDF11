@@ -1,8 +1,8 @@
 # Overview
 
--This project involves the building of a business landing page for Cache Bank.
--This project forms part of the course submissions for CodeSpace Academy (namely SDF11).
--Please see the links to the presentation slides and loom video below.
+- This project involves the building of a business landing page for Cache Bank.
+- This project forms part of the course submissions for CodeSpace Academy (namely SDF11).
+- Please see the links to the presentation slides and loom video below.
 
 # Installation
 
